@@ -1,8 +1,11 @@
+import Socialicon from "../../Socialicon/Socialicon";
+import Banner from "../Banner/Banner";
 
 const Home = () => {
     return (
         <div>
-            <h3>This is home </h3>
+           <Banner></Banner>
+           <Socialicon></Socialicon>
         </div>
     );
 };
