@@ -9,9 +9,12 @@ const Header = () => {
      <li><Link>Gallery</Link></li>
      <li><Link>Blog</Link></li>
     </>
+
+// navbar absolute z-10  md:max-w-6xl mx-auto
+
     return (
         <div className="">
-            <div className="navbar bg-slate-800 text-white flex items-center fixed top-0  max-w-screen-xl mx-auto z-10 transition-all duration-300 ">
+            <div className="navbar bg-slate-800 text-white flex  items-center fixed top-0  mx-auto z-10 transition-all duration-300 max-w-screen-xl">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
