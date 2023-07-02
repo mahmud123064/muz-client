@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="rounded-xl mb-12 text-center">
         <div className=" bg-neutral text-neutral-content grid grid-cols-1 md:grid-cols-2  ">
-            <div className="p-10 bg-[#1F2937] text-center">
+            <div className="p-10 bg-[#181d27] text-center">
                 <h2 className=" font-bold mb-4">CONTACT US</h2>
                 <p>Naogaon, Bangladesh</p>
                 <p>+880 1759 733 296</p>
