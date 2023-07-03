@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="rounded-xl mb-12 text-center">
+        <footer className="rounded-xl  text-center">
         <div className=" bg-neutral text-neutral-content grid grid-cols-1 md:grid-cols-2  ">
             <div className="p-10 bg-[#181d27] text-center">
                 <h2 className=" font-bold mb-4">CONTACT US</h2>

@@ -17,14 +17,6 @@ const Banner = () => {
         angcor.remove()
     }
 
-    {/* <Typewriter
-options={{
-    autoStart: true,
-    loop: true,
-    delay: 100,
-    strings: ['Hey ! I m Mahmud']
-}}
-/> */}
 
     return (
         <div className='mb-12'>
@@ -62,7 +54,7 @@ options={{
                         </div>
                         {/* right */}
                         <div className="hidden lg:flex flex-1 justify-end" data-aos="fade-up" data-aos-duration="3000">
-                            <img className='w-[450px]' src={img1} alt="" />
+                            <img className='w-[450px] ' src={img1} alt="" />
                         </div>
 
 
