@@ -18,7 +18,7 @@ const Projects = () => {
 
 
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 '>
-                <div className="card w-80 bg-base-100 bg-gray-500 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] hover:shadow-2xl"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div className="card w-80 mx-auto bg-base-100 bg-gray-500 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] hover:shadow-2xl"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <figure>
                         <div className='h-60 hover:overflow-scroll'>
                             <img src={Sports} alt="" />
@@ -51,7 +51,7 @@ const Projects = () => {
                     </div>
                 </div>
 
-                <div className="card w-80 bg-base-100 bg-gray-500 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] hover:shadow-2xl"  data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div className="card w-80 bg-base-100 bg-gray-500 mx-auto shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] hover:shadow-2xl"  data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <figure>
                         <div className='h-60 hover:overflow-scroll'>
                             <img src={Alhub} alt="" />
@@ -84,7 +84,7 @@ const Projects = () => {
                     </div>
                 </div>
 
-                <div className="card w-80 bg-base-100 bg-gray-500 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] hover:shadow-2xl" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div className="card w-80 bg-base-100 bg-gray-500 mx-auto shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] hover:shadow-2xl" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <figure>
                         <div className='h-60 hover:overflow-scroll'>
                             <img src={Toy} alt="" />
