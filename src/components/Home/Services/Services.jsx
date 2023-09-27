@@ -3,11 +3,12 @@ import 'aos/dist/aos.css';
 
 const Services = () => {
     return (
-        <div className="mx-16 md:mx-28 lg:mx-28 mb-12 ">
+        <div className="mx-16 md:mx-28 lg:mx-28 mb-20 ">
             <div>
-                <div className="md:w-3/12 mx-auto text-center">
-                    <p className="text-amber-600 mb-2 text-2xl uppercase">Services</p>
-                    <h2 className="text-3xl border-y-4 py-4 mb-8 uppercase"></h2>
+                <div className='mb-10'>
+                    <hr className='border-2 w-60 mx-auto mb-2' />
+                    <p className="text-[#02bfbf] mb-2 text-center text-2xl uppercase">Services</p>
+                    <hr className='border-2 w-60 mx-auto mb-2' />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

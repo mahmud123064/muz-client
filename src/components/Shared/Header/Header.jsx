@@ -9,14 +9,14 @@ const Header = () => {
         <li><a className="hover:text-teal-400" href="#contact">Contact</a></li>
         <li><a className="hover:text-teal-400" href="#projects">Projects</a></li>
         <li><a className="hover:text-teal-400" href="#skills">Skills</a></li>
-        {/* <li><a className="hover:text-teal-400">Gallery</a></li>
-        <li><a href='/blog' className="hover:text-teal-400">Blog</a></li> */}
+        {/* <li><a className="hover:text-teal-400">Gallery</a></li> */}
+        <li><a className="hover:text-teal-400" href="/">Blog</a></li>
     </>
 
 
     return (
-        <div className="">
-            <div className="navbar bg-slate-800 text-white flex absolute items-center top-0   ">
+       
+            <div className="navbar bg-slate-800 text-white flex items-center top-0 mx-auto max-w-screen-xl	 ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,7 +46,7 @@ const Header = () => {
                     </a>
                 </div>
             </div>
-        </div>
+        
     );
 };
 

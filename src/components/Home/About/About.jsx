@@ -3,10 +3,11 @@ import Typewriter from 'typewriter-effect';
 
 const About = () => {
     return (
-        <div className='mx-16 md:mx-28 lg:mx-28 mb-12' id='about'>
-            <div className="md:w-3/12 mx-auto text-center">
-                <p className="text-amber-600 mb-2 text-2xl uppercase">About Me</p>
-                <h2 className="text-3xl border-y-4 py-4 mb-8 uppercase"></h2>
+        <div className='mx-16 md:mx-28 lg:mx-28 mb-20' id='about'>
+            <div className='mb-10'>
+                <hr className='border-2 w-60 mx-auto mb-2' />
+                <p className="text-[#02bfbf] mb-2 text-center text-2xl uppercase">About Me</p>
+                <hr className='border-2 w-60 mx-auto mb-2' />
             </div>
      
             <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 md:gap-20 lg:gap-20 mb-7'>
@@ -32,7 +33,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='grid grid-cols-2 gap-5 md:grid-cols-4 lg:grid-cols-4 md:gap-20 lg:gap-20 text-white'>
+            <div className='grid grid-cols-1 gap-5 md:grid-cols-4 lg:grid-cols-4 md:gap-20 lg:gap-20 text-white'>
                 <div>
                     <p>Name: </p>
                     <p className='font-bold'>Mahmud Uz Zaman</p>

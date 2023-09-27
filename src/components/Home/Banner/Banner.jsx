@@ -1,9 +1,10 @@
 import React from 'react';
-import img1 from "../../../../public/my_picture-removebg-preview.png"
+import img1 from "../../../../public/animation_banner.json"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Typewriter from 'typewriter-effect';
 import { Link } from 'react-router-dom';
+import Lottie from 'lottie-react'
 
 const resumeUrl = 'Resume of Mahmud_Uz_Zaman.pdf'
 const Banner = () => {
@@ -19,16 +20,16 @@ const Banner = () => {
 
 
     return (
-        <div className='mb-12'>
+        <div className='mb-20'>
             <section id='banner' className='lg:h-[85vh] flex items-center bg-slate-800 lg:bg-cover lg:bg-cover lg:bg-no-repeat py-32 lg:py-0 overflow-hidden'>
                 <div className='container mx-auto h-full'>
-                    <div className='flex items-center h-full pt-8 mx-28'>
+                    <div className='md:flex items-center h-full pt-8 mx-28'>
                         {/* left */}
                         <div className='flex-1 flex flex-col items-center mx-auto lg:items-start'>
                             <p className='text-lg text-accent mb-[22px]'>
                                 Hey! I'm Mahmud Uz Zaman
                             </p>
-                            <p className='text-3xl text-white leading-[44px] md:text-4xl md:leading-tight lg:text-4xl lg:leading-[1.2] font-bold md:leading[-2px] mb-[22px] py-5'>
+                            <p className='text-3xl text-white leading-[44px] md:text-4xl md:leading-tight lg:text-4xl lg:leading-[1.2] font-bold md:leading[-2px] mb-[22px] py-5 h-72 lg:h-40'>
                                 <Typewriter
                                     options={{
                                         autoStart: true,
@@ -38,8 +39,6 @@ const Banner = () => {
                                     }}
                                 />
                             </p>
-
-                            {/* <button onClick={() => handleDownload(resumeUrl)} className="btn btn-outline btn-secondary ">Download Resume</button> */}
 
 
                             <button onClick={() => handleDownload(resumeUrl)}> <Link to="" className="relative px-5 py-4 font-medium text-white group shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
@@ -53,11 +52,12 @@ const Banner = () => {
 
                         </div>
                         {/* right */}
-                        <div className="hidden lg:flex flex-1 justify-end" data-aos="fade-up" data-aos-duration="3000">
-                            <img className='w-[450px] ' src={img1} alt="" />
+                        <div className=" lg:flex flex-1 justify-end mt-10">
+                            {/* <img className='w-[450px] ' src={img1} alt="" /> */}
+                            <Lottie animationData={img1} />
                         </div>
 
-
+                        {/* data-aos="fade-up" data-aos-duration="3000" */}
                     </div>
                 </div>
             </section>
