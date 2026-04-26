@@ -1,32 +1,264 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Services = () => {
     return (
-        <div className="mx-16 md:mx-28 lg:mx-28 mb-20 ">
-            <div>
-                <div className='mb-10'>
-                    <hr className='border-2 w-60 mx-auto mb-2' />
-                    <p className="text-[#02bfbf] mb-2 text-center text-2xl uppercase">Services</p>
-                    <hr className='border-2 w-60 mx-auto mb-2' />
+        <div className="px-4 sm:px-8 md:px-16 lg:px-28 mb-20">
+            <div className="mb-12 flex flex-col items-center gap-3">
+                {/* Top label */}
+                <span className="text-xs uppercase tracking-[4px] text-gray-400 font-medium">
+                    What I Offer
+                </span>
+
+                {/* Main title */}
+                <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
+                    My <span className="text-[#02bfbf]">Services</span>
+                </h2>
+
+                {/* Animated underline */}
+                <div className="flex items-center gap-2 mt-1">
+                    <div className="w-8 h-[2px] bg-gray-600 rounded-full"></div>
+                    <div className="w-12 h-[3px] bg-[#02bfbf] rounded-full"></div>
+                    <div className="w-3 h-3 rounded-full border-2 border-[#02bfbf]"></div>
+                    <div className="w-12 h-[3px] bg-[#02bfbf] rounded-full"></div>
+                    <div className="w-8 h-[2px] bg-gray-600 rounded-full"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    <div className="p-4 hover:shadow-2xl hover:rounded-lg shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <img className="w-16 mx-auto mb-5" src="https://i.ibb.co/7vD4L4R/web-dev.png" />
-                        <h3 className="text-center mb-3 text-2xl text-yellow-400">Web Development</h3>
-                        <p className="text-justify text-white">Web development is my passion and expertise, and it empowers my to bring ideas to life through code. With my mastery of front-end technologies like HTML, CSS, and JavaScript, transform designs into interactive interfaces that captivate users.</p>
-                    </div>
+                {/* Subtitle */}
+                <p className="text-gray-400 text-sm text-center max-w-md mt-1">
+                    Turning ideas into real-world products with clean code and
+                    modern technologies.
+                </p>
+            </div>
 
-                    <div className="p-4 hover:shadow-2xl hover:rounded-lg shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <img className="w-16 mx-auto mb-5" src="https://i.ibb.co/1mXwBPC/responsive-1.png" />
-                        <h3 className="text-center mb-3 text-2xl text-yellow-400">Responsive Development</h3>
-                        <p className="text-justify text-white">Responsive web design is an essential concept in modern web development, and as a web developer, it is crucial to understand and implement it effectively. In today's digital landscape, users access websites using a wide range of devices such as desktop computers, laptops, tablets, and smartphones. </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Full Stack Web Development */}
+                <div
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                    className="group relative bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 shadow-[0_0px_20px_rgba(8,112,184,0.3)] hover:shadow-[0_0px_30px_rgba(2,191,191,0.5)] transition-all duration-300 hover:-translate-y-2"
+                >
+                    <div className="w-14 h-14 rounded-xl bg-sky-500/10 flex items-center justify-center group-hover:bg-[#02bfbf]/10 transition-all duration-300">
+                        <img
+                            className="w-8 h-8"
+                            src="https://i.ibb.co/7vD4L4R/web-dev.png"
+                            alt="Full Stack"
+                        />
                     </div>
-                    <div className="p-4 hover:shadow-2xl hover:rounded-lg shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <img className="w-16 mx-auto mb-5" src="https://i.ibb.co/7Cwxtzb/web-development.png" />
-                        <h3 className="text-center mb-3 text-2xl text-yellow-400">Web Maintenance</h3>
-                        <p className="text-justify text-white">Web maintenance is a crucial aspect of being a web developer, as it involves the ongoing management, monitoring, and updates required to keep a website running smoothly and effectively. As a web developer, I understand the importance of providing a seamless user experience.</p>
+                    <div>
+                        <h3 className="text-xl font-bold text-yellow-400 group-hover:text-[#02bfbf] transition-colors duration-300 mb-2">
+                            Full Stack Development
+                        </h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Building complete web applications from front to
+                            back using the MERN stack — MongoDB, Express.js,
+                            React, and Node.js — delivering fast, scalable, and
+                            production-ready solutions.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-700">
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            React
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Node.js
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            MongoDB
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Express
+                        </span>
+                    </div>
+                </div>
+
+                {/* Frontend Development */}
+                <div
+                    data-aos="fade-up"
+                    data-aos-duration="700"
+                    className="group relative bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 shadow-[0_0px_20px_rgba(8,112,184,0.3)] hover:shadow-[0_0px_30px_rgba(2,191,191,0.5)] transition-all duration-300 hover:-translate-y-2"
+                >
+                    <div className="w-14 h-14 rounded-xl bg-sky-500/10 flex items-center justify-center group-hover:bg-[#02bfbf]/10 transition-all duration-300">
+                        <img
+                            className="w-8 h-8"
+                            src="https://i.ibb.co/1mXwBPC/responsive-1.png"
+                            alt="Frontend"
+                        />
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-bold text-yellow-400 group-hover:text-[#02bfbf] transition-colors duration-300 mb-2">
+                            Frontend Development
+                        </h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Crafting pixel-perfect, responsive, and interactive
+                            UIs using React.js, Next.js, Tailwind CSS, and
+                            Bootstrap — ensuring a smooth experience across all
+                            devices and screen sizes.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-700">
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Next.js
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Tailwind
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Bootstrap
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            CSS
+                        </span>
+                    </div>
+                </div>
+
+                {/* Mobile App Development */}
+                <div
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    className="group relative bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 shadow-[0_0px_20px_rgba(8,112,184,0.3)] hover:shadow-[0_0px_30px_rgba(2,191,191,0.5)] transition-all duration-300 hover:-translate-y-2"
+                >
+                    <div className="w-14 h-14 rounded-xl bg-sky-500/10 flex items-center justify-center group-hover:bg-[#02bfbf]/10 transition-all duration-300">
+                        <img
+                            className="w-8 h-8"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="Mobile"
+                        />
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-bold text-yellow-400 group-hover:text-[#02bfbf] transition-colors duration-300 mb-2">
+                            Mobile App Development
+                        </h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Developing cross-platform mobile applications for
+                            both iOS and Android using React Native — delivering
+                            native-like performance with a single codebase.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-700">
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            React Native
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            iOS
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Android
+                        </span>
+                    </div>
+                </div>
+
+                {/* REST API Development */}
+                <div
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                    className="group relative bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 shadow-[0_0px_20px_rgba(8,112,184,0.3)] hover:shadow-[0_0px_30px_rgba(2,191,191,0.5)] transition-all duration-300 hover:-translate-y-2"
+                >
+                    <div className="w-14 h-14 rounded-xl bg-sky-500/10 flex items-center justify-center group-hover:bg-[#02bfbf]/10 transition-all duration-300">
+                        <img
+                            className="w-8 h-8"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="API"
+                        />
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-bold text-yellow-400 group-hover:text-[#02bfbf] transition-colors duration-300 mb-2">
+                            REST API Development
+                        </h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Designing and building secure, efficient, and
+                            well-structured REST APIs using Node.js and
+                            Express.js — powering web and mobile applications
+                            with reliable back-end services.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-700">
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Node.js
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Express
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            REST
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            JWT
+                        </span>
+                    </div>
+                </div>
+
+                {/* State Management */}
+                <div
+                    data-aos="fade-up"
+                    data-aos-duration="700"
+                    className="group relative bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 shadow-[0_0px_20px_rgba(8,112,184,0.3)] hover:shadow-[0_0px_30px_rgba(2,191,191,0.5)] transition-all duration-300 hover:-translate-y-2"
+                >
+                    <div className="w-14 h-14 rounded-xl bg-sky-500/10 flex items-center justify-center group-hover:bg-[#02bfbf]/10 transition-all duration-300">
+                        <img
+                            className="w-8 h-8"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                            alt="Redux"
+                        />
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-bold text-yellow-400 group-hover:text-[#02bfbf] transition-colors duration-300 mb-2">
+                            State Management
+                        </h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Managing complex application state efficiently using
+                            Redux and Redux Toolkit — ensuring predictable data
+                            flow, clean architecture, and seamless user
+                            experiences in large-scale apps.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-700">
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Redux
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Redux Toolkit
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Context API
+                        </span>
+                    </div>
+                </div>
+
+                {/* Web Maintenance */}
+                <div
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    className="group relative bg-gray-900 rounded-2xl p-6 flex flex-col gap-4 shadow-[0_0px_20px_rgba(8,112,184,0.3)] hover:shadow-[0_0px_30px_rgba(2,191,191,0.5)] transition-all duration-300 hover:-translate-y-2"
+                >
+                    <div className="w-14 h-14 rounded-xl bg-sky-500/10 flex items-center justify-center group-hover:bg-[#02bfbf]/10 transition-all duration-300">
+                        <img
+                            className="w-8 h-8"
+                            src="https://i.ibb.co/7Cwxtzb/web-development.png"
+                            alt="Maintenance"
+                        />
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-bold text-yellow-400 group-hover:text-[#02bfbf] transition-colors duration-300 mb-2">
+                            Web Maintenance
+                        </h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Providing ongoing support, bug fixing, performance
+                            optimization, and feature updates to keep your web
+                            application running smoothly, securely, and up to
+                            date.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-700">
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Bug Fixing
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Performance
+                        </span>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full">
+                            Updates
+                        </span>
                     </div>
                 </div>
             </div>

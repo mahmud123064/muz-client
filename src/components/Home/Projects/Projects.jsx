@@ -1,120 +1,185 @@
-import React from 'react';
-import Sports from '../../../../public/muz-sports.png'
-import Alhub from '../../../../public/screencapt.png'
-import Toy from '../../../../public/toy-truck.png'
-import Lottie from 'lottie-react'
-import { Link } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from "react";
+import Sports from "../../../../public/muz-sports.png";
+import Alhub from "../../../../public/screencapt.png";
+import Toy from "../../../../public/toy-truck.png";
+import Lottie from "lottie-react";
+import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Projects = () => {
+    const projects = [
+        {
+            id: 1,
+            number: "01",
+            title: "Address Bangladesh",
+            description:
+                "A responsive NGO website built with Next.js 16 and Tailwind CSS, featuring dark/light theme, EN/BN language switching, dynamic project pages, filterable gallery, and SEO optimization.",
+            image: "https://res.cloudinary.com/dhksln9ks/image/upload/v1777219182/screencapture-addressbangladesh-org-2026-04-26-20_41_18_d20qyd.png",
+            alt: "Sports project",
+            liveUrl: "https://www.addressbangladesh.org/",
+            duration: "600",
+            features: [
+                "Built a responsive NGO website with Next.js 16, dark/light theme, and bilingual (EN/BN) support.",
+                "Implemented dynamic project pages, filterable gallery with lightbox, and Swiper testimonial slider.",
+                "SEO-optimized with static generation, Open Graph metadata, and a centralized TypeScript data layer.",
+            ],
+            techTags: ["Nextjs", "Firebase", "MongoDB"],
+        },
+        {
+            id: 2,
+            number: "02",
+            title: "Al Hub Job Portal",
+            description:
+                "A job listing platform with category filtering, detailed job views, application system and a statistics dashboard.",
+            image: Alhub,
+            alt: "Alhub project",
+            liveUrl: "https://snazzy-boba-522246.netlify.app/",
+            duration: "700",
+            features: [
+                "Featured jobs section",
+                "Remote or full-time category filter",
+                "Statistics & Blog section",
+            ],
+            techTags: ["React", "Tailwind", "Node.js"],
+        },
+        {
+            id: 3,
+            number: "03",
+            title: "Toy Truck Store",
+            description:
+                "An e-commerce toy store where users can add, manage, and browse toys with a personalized dashboard and top-selling section.",
+            image: Toy,
+            alt: "Toy project",
+            liveUrl: "https://toy-truck-7f908.web.app/",
+            duration: "800",
+            features: [
+                "Login & Registration system",
+                "User can add & manage toys",
+                "Top selling section & Blog",
+            ],
+            techTags: ["MERN", "Firebase", "JWT"],
+        },
+    ];
+
     return (
-        <div className=' md:mx-28 lg:mx-28 mb-20 ' id='projects'>
-            <div className='mb-10'>
-                <hr className='border-2 w-60 mx-auto mb-2' />
-                <p className="text-[#02bfbf] mb-2 text-center text-2xl uppercase">My Projects</p>
-                <hr className='border-2 w-60 mx-auto mb-2' />
+        <div className="px-4 sm:px-8 md:px-16 lg:px-28 mb-20" id="projects">
+            {/* Section Header */}
+            <div className="mb-12 flex flex-col items-center gap-3">
+                <span className="text-xs uppercase tracking-[4px] text-gray-400 font-medium">
+                    What I've Built
+                </span>
+                <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
+                    My <span className="text-[#02bfbf]">Projects</span>
+                </h2>
+                <div className="flex items-center gap-2 mt-1">
+                    <div className="w-8 h-[2px] bg-gray-600 rounded-full"></div>
+                    <div className="w-12 h-[3px] bg-[#02bfbf] rounded-full"></div>
+                    <div className="w-3 h-3 rounded-full border-2 border-[#02bfbf]"></div>
+                    <div className="w-12 h-[3px] bg-[#02bfbf] rounded-full"></div>
+                    <div className="w-8 h-[2px] bg-gray-600 rounded-full"></div>
+                </div>
+                <p className="text-gray-400 text-sm text-center max-w-md mt-1">
+                    A collection of my best work built with React, MERN stack,
+                    and modern web technologies.
+                </p>
             </div>
-            <h4 className='text-gray-400  font-bold text-center mb-5'>  These are some of my best projects. I have built these with React, MERN and vanilla CSS. Some are on going. Check them out.</h4>
 
+            {/* Project Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {projects.map((project) => (
+                    <div
+                        key={project.id}
+                        data-aos="fade-up"
+                        data-aos-duration={project.duration}
+                        className="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-[0_0px_20px_rgba(8,112,184,0.3)] hover:shadow-[0_0px_30px_rgba(2,191,191,0.5)] transition-all duration-300 hover:-translate-y-2"
+                    >
+                        {/* Image */}
+                        <div className="relative h-52 overflow-hidden">
+                            <img
+                                src={project.image}
+                                alt={project.alt}
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto '>
-                <div className="card w-80 mx-auto bg-base-100 bg-gray-500 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] hover:shadow-2xl" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <figure>
-                        <div className='h-60 hover:overflow-scroll'>
-                            <img src={Sports} alt="" />
+                            {/* Live badge */}
+                            <div className="absolute top-3 right-3">
+                                <span className="flex items-center gap-1 bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full border border-green-500/30">
+                                    <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+                                    Live
+                                </span>
+                            </div>
+
+                            {/* Project number */}
+                            <div className="absolute top-3 left-3">
+                                <span className="text-[#02bfbf] text-xs font-bold tracking-widest bg-gray-900/70 px-2 py-1 rounded-full">
+                                    {project.number}
+                                </span>
+                            </div>
                         </div>
-                    </figure>
-                    <div className="card-body">
 
-                        <div className="card-actions justify-end">
+                        {/* Content */}
+                        <div className="p-5 flex flex-col gap-4">
+                            <div>
+                                <h3 className="text-white font-bold text-lg mb-1 group-hover:text-[#02bfbf] transition-colors duration-300">
+                                    {project.title}
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    {project.description}
+                                </p>
+                            </div>
 
-                            <Link to='https://muz-sports.web.app/' target='_blank' class="px-5 py-2.5 relative rounded group font-medium text-white font-medium inline-block">
-                                <span class="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-purple-600 to-blue-500"></span>
-                                <span class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-purple-600 to-blue-500"></span>
-                                <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-purple-600 to-blue-500"></span>
-                                <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-purple-600 from-blue-500"></span>
-                                <span class="relative">LIVE</span>
-                            </Link>
+                            {/* Features */}
+                            <ul className="flex flex-col gap-1">
+                                {project.features.map((feature, i) => (
+                                    <li
+                                        key={i}
+                                        className="flex items-center gap-2 text-gray-400 text-sm"
+                                    >
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#02bfbf] flex-shrink-0"></span>
+                                        {feature}
+                                    </li>
+                                ))}
+                            </ul>
 
-                        </div>
-                        <div>
-                            <h3 className='text-gray-300 font-bold'>Features</h3>
-                            <div className='text-gray-300'>
-                                <li>Login and Registration system</li>
-                                <li>Classes section for add class</li>
-                                <li>Dashboard section</li>
-                                <li>Three types of Dashboard</li>
-                                <li>Student, Instructor and Admin Dashboard</li>
+                            {/* Tech tags + Visit link */}
+                            <div className="flex items-center justify-between pt-3 border-t border-gray-700 mt-auto">
+                                <div className="flex gap-2 flex-wrap">
+                                    {project.techTags.map((tag, i) => (
+                                        <span
+                                            key={i}
+                                            className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded-full"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                                <Link
+                                    to={project.liveUrl}
+                                    target="_blank"
+                                    className="flex items-center gap-1 text-sm text-[#02bfbf] hover:text-white font-medium transition-colors duration-200"
+                                >
+                                    Visit
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-4 h-4"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                        />
+                                    </svg>
+                                </Link>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div className="card w-80 bg-base-100 bg-gray-500 mx-auto shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] hover:shadow-2xl" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <figure>
-                        <div className='h-60 hover:overflow-scroll'>
-                            <img src={Alhub} alt="" />
-                        </div>
-                    </figure>
-                    <div className="card-body">
-
-                        <div className="card-actions justify-end">
-
-                            <Link to='https://snazzy-boba-522246.netlify.app/' target='_blank' class="px-5 py-2.5 relative rounded group font-medium text-white font-medium inline-block">
-                                <span class="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-purple-600 to-blue-500"></span>
-                                <span class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-purple-600 to-blue-500"></span>
-                                <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-purple-600 to-blue-500"></span>
-                                <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-purple-600 from-blue-500"></span>
-                                <span class="relative">LIVE</span>
-                            </Link>
-
-                        </div>
-                        <div>
-                            <h3 className='text-gray-300 font-bold'>Features</h3>
-                            <div className='text-gray-300'>
-                                <li>Feature jobs section</li>
-                                <li>Jobs category remote or full-time</li>
-                                <li>Details option and Apply</li>
-                                <li>There is a statistics option</li>
-                                <li>A Blog options</li>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="card w-80 bg-base-100 bg-gray-500 mx-auto shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] hover:shadow-2xl" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <figure>
-                        <div className='h-60 hover:overflow-scroll'>
-                            <img src={Toy} alt="" />
-                        </div>
-                    </figure>
-                    <div className="card-body">
-
-                        <div className="card-actions justify-end">
-
-                            <Link to='https://toy-truck-7f908.web.app/' target='_blank' class="px-5 py-2.5 relative rounded group font-medium text-white font-medium inline-block">
-                                <span class="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-purple-600 to-blue-500"></span>
-                                <span class="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-purple-600 to-blue-500"></span>
-                                <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-purple-600 to-blue-500"></span>
-                                <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-purple-600 from-blue-500"></span>
-                                <span class="relative">LIVE</span>
-                            </Link>
-
-                        </div>
-                        <div>
-                            <h3 className='text-gray-300 font-bold'>Features</h3>
-                            <div className='text-gray-300'>
-                                <li>Login and Registration system</li>
-                                <li>User can Add a toy</li>
-                                <li>User can only see his added toy on my toy section</li>
-                                <li>Every one can see all toy</li>
-                                <li>Top selling option and blog</li>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                ))}
             </div>
         </div>
     );
