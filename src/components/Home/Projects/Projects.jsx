@@ -1,7 +1,4 @@
 import React from "react";
-import Sports from "../../../../public/muz-sports.png";
-import Alhub from "../../../../public/screencapt.png";
-import Toy from "../../../../public/toy-truck.png";
 import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
@@ -32,7 +29,7 @@ const Projects = () => {
             title: "Al Hub Job Portal",
             description:
                 "A job listing platform with category filtering, detailed job views, application system and a statistics dashboard.",
-            image: Alhub,
+            image: "https://res.cloudinary.com/dhksln9ks/image/upload/v1777357129/screencapt_pzonfe.png",
             alt: "Alhub project",
             liveUrl: "https://snazzy-boba-522246.netlify.app/",
             duration: "700",
@@ -49,7 +46,7 @@ const Projects = () => {
             title: "Toy Truck Store",
             description:
                 "An e-commerce toy store where users can add, manage, and browse toys with a personalized dashboard and top-selling section.",
-            image: Toy,
+            image: "https://res.cloudinary.com/dhksln9ks/image/upload/v1777357133/toy-truck_wbwf9w.png",
             alt: "Toy project",
             liveUrl: "https://toy-truck-7f908.web.app/",
             duration: "800",

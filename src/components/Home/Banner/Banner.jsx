@@ -45,7 +45,7 @@ const Banner = () => {
                                 <p className="text-gray-400 text-lg mb-2 tracking-wide">
                                     Hey! I'm
                                 </p>
-                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-3">
+                                <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight mb-3">
                                     <span className="text-[#02bfbf]">
                                         {" "}
                                         Mahmud{" "}
