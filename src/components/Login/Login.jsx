@@ -31,6 +31,8 @@ const Login = () => {
 
             navigate("/");
         } catch (error) {
+            console.log("CODE:", error.code);      // ← add this
+        console.log("MSG:", error.message);    // ← and this
             let message = "Something went wrong. Please try again.";
             switch (error.code) {
                 case "auth/user-not-found":
